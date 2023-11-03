@@ -1,14 +1,14 @@
 import 'package:chat_app/constants.dart';
-import 'package:chat_app/view/register_view.dart';
+import 'package:chat_app/view/login_view.dart';
 import 'package:chat_app/widgets/custom_button.dart';
 import 'package:chat_app/widgets/custom_text.dart';
 import 'package:chat_app/widgets/custom_text_field.dart';
 import 'package:flutter/Material.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class RegisterView extends StatelessWidget {
+  const RegisterView({super.key});
 
-  static String id = 'LoginView';
+  static String id = 'RegisterView';
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class LoginView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
-                  'Log in',
+                  'Sign Up',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 24,
@@ -71,7 +71,7 @@ class LoginView extends StatelessWidget {
               height: 32,
             ),
             const CustomButton(
-              title: 'Log in',
+              title: 'Sign Up',
             ),
             const SizedBox(
               height: 18,
@@ -80,16 +80,16 @@ class LoginView extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'don\'t have an account?  ',
+                  'already have an account?  ',
                   style: TextStyle(
                     color: Colors.white,
                   ),
                 ),
                 NavigaterText(
+                  navigatorText: 'Log in',
                   onTap: () {
-                    Navigator.pushNamed(context, RegisterView.id);
+                    Navigator.pushNamed(context, LoginView.id);
                   },
-                  navigatorText: 'Sign Up',
                 ),
               ],
             ),
