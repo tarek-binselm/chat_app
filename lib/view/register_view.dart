@@ -22,7 +22,7 @@ class RegisterView extends StatelessWidget {
               height: 75,
             ),
             Image.asset(
-              'assets/images/scholar.png',
+              kLogo,
               height: 100,
             ),
             const Row(
